@@ -1,0 +1,221 @@
+html{
+    margin:0
+}
+
+
+
+nav{
+    display: none;
+    min-height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E0E0E0;
+    position: fixed;
+
+}
+
+.navbar-wrapper{
+    min-height: 50px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid gray;
+    border-top:0.5px solid gray;
+}
+
+.navbar-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-link{
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #696969;
+    line-height: 50px;
+    transition: 0.5s;
+    padding: 2px;
+}
+
+
+.nav-link:hover{
+    color: white;
+    background-color:#2F4F4F;
+}
+
+.categories{
+    width: 500px;
+    opacity: 0;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    visibility: hidden;
+    z-index: 1;
+    max-height: 0;
+    transition: max-height .5s;
+    transition: opacity .6s;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    background-color: #2F4F4F;
+}
+
+categories-link{
+    pointer-events: none;
+}
+
+
+.dropCategories:hover .categories{
+    opacity:0.7;
+    visibility: visible;
+    max-height: 1000px;
+}
+
+.dropCategories:hover .categories-link{
+    color: white;
+}
+
+.cat-in-nav{
+    width: 30%;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cat-in-nav:hover{
+    color: cadetblue;
+}
+
+
+
+
+.burger-btn{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    position:relative;
+
+}
+.burger-btn:before{
+    content: '';
+    position: absolute;
+    top:0;
+    width:20px;
+    background-color: black;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.burger-btn:after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width:20px;
+    background-color: black;
+    height: 3px;
+    transition: 0.5s;
+
+}
+
+.burger-btn span{
+    content: '';
+    position: absolute;
+    top:8.5px;
+    width:20px;
+    background-color: black;
+    height: 3px;
+    transition:0.5s ;
+}
+
+.burger-btn.active:before{
+    transform: rotate(45deg);
+    margin-top: 8px;
+}
+
+.burger-btn.active span{
+    transform: rotate(-45deg);
+}
+
+.burger-btn.active:after{
+    opacity: 0;
+}
+
+
+.menu{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left:0;
+    transform: translateX(-100%);
+    transition: 0.8s;
+    margin-top: 50px;
+}
+
+.menu.active{
+    transform: translateX(0);
+    transition: 0.8s;
+}
+
+.menu__content{
+    width: 50%;
+    height:100%;
+    background-color: #006666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__header{
+    color: white;
+    font-size: 2rem;
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+}
+
+.burger-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.menu-list{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 900px){
+    .navbar-wrapper{
+        display: none;
+
+    }
+
+    nav{
+        display: flex;
+    }
+
+    .menu{
+        display: inline;
+    }
+
+
+
+}

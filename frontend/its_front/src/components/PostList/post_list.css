@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "PT Bold";
+    src: url('../../styles/fonts/PTS75F.ttf');
+}
+
+@font-face {
+    font-family: "PT Regular";
+    src: url('../../styles/fonts/PTS55F.ttf');
+}
+
+.no-posts-message{
+    align-items: center;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.post-list-wrapper{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.post-list{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.post{
+    margin-top: 50px;
+    border: 0.5px solid #D3D3D3;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    padding-bottom: 10px;
+}
+
+.post-text{
+    width: 90%;
+    color: #575757;
+}
+
+.poster{
+    width: 90%;
+    max-height: 350px;
+    margin-top: 80px;
+}
+
+.post-desc{
+    font-size: 18px;
+    font-family: "PT Regular";
+    margin-top: 10px;
+}
+
+.post-title{
+    font-family: "PT Bold";
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.read-more{
+    font-size: 18px;
+    text-decoration: none;
+    color: #191970;
+    transition: 0.5s;
+}
+
+.read-more:hover{
+    font-size: 18px;
+    text-decoration: none;
+    color: #5f9ea0;
+}
+
+.more-and-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+.categories-in-post{
+    margin-top:10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.category{
+    line-height: 20px;
+    margin-right: 10px;
+    border:0.3px solid #696969;
+    border-radius: 35px;
+    padding-left:10px;
+    padding-right: 10px;
+    color: #2F4F4F;
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+
+.category:hover{
+    color:white;
+    background-color: #2F4F4F;
+}
+
+.publication-date{
+    color: #575757;
+    text-align: right;
+}
+
+@media screen and (max-width:1024px){
+    .post-list-wrapper{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .post-title{
+        font-size: 18px;
+    }
+
+    .post-desc{
+        font-size: 13px;
+    }
+
+    .category{
+        border: none;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:540px){
+    .post-list-wrapper{
+        width: 70%;
+    }
+
+    .post-title{
+        font-size: 18px;
+    }
+
+    .post-desc{
+        font-size: 13px;
+    }
+
+    .poster{
+        margin-top: 30px;
+    }
+}

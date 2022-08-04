@@ -1,0 +1,39 @@
+.post-wrapper-detail{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.post-detail{
+    margin-top: 50px;
+    width: 80%;
+}
+
+.post-title-detail{
+    text-align: center;
+    font-family: "PT Bold";
+    font-size: 24px;
+    color:#575757;
+}
+
+.post-content-detail{
+    font-size: 18px;
+    font-family: "PT Regular";
+    color: #575757;
+}
+
+img{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 540px) {
+    .post-content-detail{
+        font-size: 13px;
+    }
+
+    .post-title-detail{
+        font-size: 20px;
+    }
+
+
+}
